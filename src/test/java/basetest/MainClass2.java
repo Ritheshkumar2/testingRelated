@@ -8,12 +8,10 @@ import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import base.BaseTest;
-import pages.HomePage;
 import pages.Loginpage;
-import utils.RerunTestCasesWhenFailed;
 
 //@Listeners(utils.ExtentReportFinalExtendsClass.class)
-public class MainClass extends BaseTest {
+public class MainClass2 extends BaseTest {
 	
 	@BeforeClass
 	public void setUp() {
@@ -29,13 +27,6 @@ public class MainClass extends BaseTest {
 	public void loginTest() {
 		Loginpage object=new Loginpage(getDriver());
 		object.loginpage();
-		
-	}
-	
-	@Test(priority=2,retryAnalyzer=utils.RerunTestCasesWhenFailed.class)
-	public void homeTest() {
-		HomePage object=new HomePage();
-		object.homepage();
 		
 	}
 	

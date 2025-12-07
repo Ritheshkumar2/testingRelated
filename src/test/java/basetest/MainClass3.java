@@ -10,10 +10,9 @@ import org.testng.annotations.Test;
 import base.BaseTest;
 import pages.HomePage;
 import pages.Loginpage;
-import utils.RerunTestCasesWhenFailed;
 
 //@Listeners(utils.ExtentReportFinalExtendsClass.class)
-public class MainClass extends BaseTest {
+public class MainClass3 extends BaseTest {
 	
 	@BeforeClass
 	public void setUp() {
@@ -32,7 +31,7 @@ public class MainClass extends BaseTest {
 		
 	}
 	
-	@Test(priority=2,retryAnalyzer=utils.RerunTestCasesWhenFailed.class)
+	@Test(priority=2)
 	public void homeTest() {
 		HomePage object=new HomePage();
 		object.homepage();
